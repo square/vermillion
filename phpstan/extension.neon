@@ -1,0 +1,14 @@
+services:
+  - class: Square\Vermillion\PHPStan\RouteMethodsReflectionExtension
+    tags:
+      - phpstan.broker.methodsClassReflectionExtension
+  - class: Square\Vermillion\PHPStan\RouterMethodsReflectionExtension
+    tags:
+      - phpstan.broker.methodsClassReflectionExtension
+  - class: Square\Vermillion\PHPStan\RouteFacadeMethodsReflectionExtension
+    tags:
+      - phpstan.broker.methodsClassReflectionExtension
+
+
+
+

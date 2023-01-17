@@ -1,0 +1,13 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+    - ./phpstan/extension.neon
+
+parameters:
+  level: 8
+  paths:
+    - src
+    - integration-tests/shared
+#   - tests
+  ignoreErrors:
+    - '#Creating new PHPStan\\Reflection\\Native\\NativeParameterReflection is not covered by backward compatibility promise.#'
+
