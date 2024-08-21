@@ -26,11 +26,14 @@ else
   echo "Skipping Laravel 8.x and 9.x tests -- PHP version too low"
 fi
 
-if [[ $(php -i | grep "PHP Version => 8.1.*") || $(php -i | grep "PHP Version => 8.2.*") ]]; then
+if [[ $(php -i | grep "PHP Version => 8.1.*") || $(php -i | grep "PHP Version => 8.2.*") || $(php -i | grep "PHP Version => 8.3.*") ]]; then
   echo "Testing Laravel 10.x..."
   _test-laravel-version "10.x"
+
+  echo "Testing Laravel 11.x..."
+  _test-laravel-version "11.x"
 else
-  echo "Skipping Laravel 10.x tests -- PHP version too low"
+  echo "Skipping Laravel 10.x and 11.x tests -- PHP version too low"
 fi
 
 
